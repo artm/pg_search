@@ -47,7 +47,7 @@ module PgSearch
       end
 
       def ts_headline highlight_options_overrides
-        "ts_headline((#{document}), (#{tsquery}), '#{ts_headline_options(highlight_options_overrides)}')"
+        "ts_headline(#{dictionary}, (#{document}), (#{tsquery}), '#{ts_headline_options(highlight_options_overrides)}')"
       end
 
       def ts_headline_options highlight_options_overrides
